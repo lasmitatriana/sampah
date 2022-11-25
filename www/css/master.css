@@ -1,0 +1,176 @@
+/*
+       Licensed to the Apache Software Foundation (ASF) under one
+       or more contributor license agreements.  See the NOTICE file
+       distributed with this work for additional information
+       regarding copyright ownership.  The ASF licenses this file
+       to you under the Apache License, Version 2.0 (the
+       "License"); you may not use this file except in compliance
+       with the License.  You may obtain a copy of the License at
+
+         http://www.apache.org/licenses/LICENSE-2.0
+
+       Unless required by applicable law or agreed to in writing,
+       software distributed under the License is distributed on an
+       "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+       KIND, either express or implied.  See the License for the
+       specific language governing permissions and limitations
+       under the License.
+*/
+            body {
+            margin: 0;
+            padding: 85px;
+            background-color: #469597;
+            font-family: 'Helvetica';
+            }   
+           
+            
+            .page h3{
+                font-size:35px;
+            }
+            .page p img{
+                margin-top:20px;
+            }
+            #msg{
+                border: 1px solid #eee;
+                padding: 1rem;
+                margin: 1rem;
+            }
+            h3{
+                 margin-top:-2px;
+                color: #B9E4C9;
+            }
+            h3{
+            margin-top:150px;
+            }  
+            .page h3{
+                font-size:35px;
+            }
+            .page p img{
+                margin-top:20px;
+            }
+            #msg{
+                border: 1px solid #eee;
+                padding: 1rem;
+                margin: 1rem;
+            }
+            h3{
+                 margin-top:-2px;
+                color: #B9E4C9;
+            }
+            h3{
+            margin-top:150px;
+            }  
+  #info{
+    background:#ffa;
+    border: 1px solid #ffd324;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    clear:both;
+    margin:15px 6px 0;
+    width:295px;
+    padding:4px 0px 2px 10px;
+  }
+  
+  #info > h4{
+    font-size:.95em;
+    margin:5px 0;
+  }
+ 	
+  #stage.theme{
+    padding-top:3px;
+  }
+
+  /* Definition List */
+  #stage.theme > dl{
+  	padding-top:10px;
+  	clear:both;
+  	margin:0;
+  	list-style-type:none;
+  	padding-left:10px;
+  	overflow:auto;
+  }
+
+  #stage.theme > dl > dt{
+  	font-weight:bold;
+  	float:left;
+  	margin-left:5px;
+  }
+
+  #stage.theme > dl > dd{
+  	width:45px;
+  	float:left;
+  	color:#a87;
+  	font-weight:bold;
+  }
+
+  /* Content Styling */
+  #stage.theme > h1, #stage.theme > h2, #stage.theme > p{
+    margin:1em 0 .5em 13px;
+  }
+
+  #stage.theme > h1{
+    color:#eee;
+    font-size:1.6em;
+    text-align:center;
+    margin:0;
+    margin-top:15px;
+    padding:0;
+  }
+
+  #stage.theme > h2{
+  	clear:both;
+    margin:0;
+    padding:3px;
+    font-size:1em;
+    text-align:center;
+  }
+  /* Stage Buttons */
+  #stage.theme a.btn{
+  	border: 1px solid #555;
+  	-webkit-border-radius: 5px;
+  	border-radius: 5px;
+  	text-align:center;
+  	display:block;
+  	float:left;
+  	background:#444;
+  	width:300px;
+  	color:#9ab;
+  	font-size:1.1em;
+  	text-decoration:none;
+  	padding: 80px;
+  	margin:3px 0px 3px 5px;
+  }
+  #stage.theme a.btn.large {border-radius: 50%;
+    background-color:  #ff0000;
+      box-shadow: 0 9px #999;
+      }
+  #stage.theme a.btn.large{
+        margin-top:100px;
+}  
+#stage.theme a.btn.large:hover {
+  background-color: #cc0000;
+}
+  #stage.theme a.btn.large:active{
+    background-color:   #800000;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+  #stage.theme a.btn.large{
+  	width:70px;
+  	padding:70px;
+  }
+            .tengah{
+            margin-top:100px;
+        }  
+            #tengah:hover {background-color: #B9E4C9}
+            #tengah:active{
+                background-color: #3e8e41;
+                box-shadow: 0 5px #666;
+                transform: translateY(4px);
+            }
+      #h3{
+        margin-top:100px;
+} 
+
+

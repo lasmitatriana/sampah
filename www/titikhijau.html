@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src * data: gap: content: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'"
+    />
+    <script src="components/loader.js"></script>
+    <link rel="stylesheet" href="components/loader.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script>
+      // PhoneGap event handler
+      document.addEventListener('deviceready', onDeviceReady, false);
+      function onDeviceReady() {
+        console.log('PhoneGap is ready');
+      }
+    </script>
+    <style>
+      body {
+        background-color: #469597;
+      }
+      .button {
+        /* Hijau */
+        border: none;
+        color: white;
+        padding: 80px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 20px;
+        margin: 20px 30px;
+        cursor: pointer;
+      }
+      .button2 {
+        border-radius: 50%;
+        background-color: #7fff00;
+      }
+      .tengah {
+        margin-top: 200px;
+      }
+      h3 {
+        margin-top: -2px;
+        margin-top: -2px;
+        color: #b9e4c9;
+      }
+      .button2 {
+        margin-top: 250px;
+        box-shadow: 0 9px #999;
+      }
+      .button2:hover {
+        background-color: #cc0000;
+      }
+      .button2:active {
+        background-color: #800000;
+        box-shadow: 0 5px #666;
+        transform: translateY(4px);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <a class="button--large" href="phonegap-demo.html">Start Demo</a> -->
+    <div>
+      <center>
+        <button
+          id="btn_penjemputan"
+          name="btnPenjemputan"
+          class="button button2"
+          style="background-color: green"
+        ></button>
+        <h3>Tekan Tombol Diatas Untuk Menaruh Sampah</h3>
+      </center>
+    </div>
+    <script src="js/index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      	     <!-- CSS FILES -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <link href="css/bootstrap-icons.css" rel="stylesheet">
+
+        <link href="css/magnific-popup.css" rel="stylesheet">
+
+        <link href="css/templatemo-first-portfolio-style.css" rel="stylesheet">
+  
+          <style> 
+		  #btn{
+                font-size: 1rem;
+                line-height: 2.5rem;
+                margin: 1rem;
+                margin-top: 35px;
+                width:50%;
+                background-color:#BBC6C8;
+                display: inline-block;
+                cursor: pointer;
+                text-decoration: none;
+                outline: none;
+                color: white;
+                border: none;
+                border-radius: 15px;
+                box-shadow: 0 9px #999;
+            }
+            #btn:hover {background-color: #3e8e41}
+            #btn:active{
+                background-color: #3e8e41;
+                box-shadow: 0 5px #666;
+                transform: translateY(4px);
+            }
+            .button {
+    border: none;
+     color: white;
+    padding: 50px;
+    text-align: center;
+    text-decoration: none;
+     display: inline-block;
+    font-size: 20px;
+    margin: 20px 30px;
+    cursor: pointer;
+    }
+    .button2 {border-radius: 50%;
+    background-color: #0000FF;}
+    .tengah{
+        margin-top:200px;
+    }   
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+h3{
+    font-size:35px;
+    text-align:center;
+    margin-top:120px;
+
+}
+            h3 {
+             
+             color:#B9E4C9;
+            }
+.form .estimasi{
+    font-size:23px;
+}
+.form{
+    margin-top:30px;
+}
+.container {
+  padding: 16px;
+}
+		</style>
+   
+    <title>Capture Photo</title>
+
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+    <script type="text/javascript" charset="utf-8">
+
+    var pictureSource;   // picture source
+    var destinationType; // sets the format of returned value
+
+    // Wait for device API libraries to load
+    //
+    document.addEventListener("deviceready",onDeviceReady,false);
+
+    // device APIs are available
+    //
+    function onDeviceReady() {
+        pictureSource=navigator.camera.PictureSourceType;
+        destinationType=navigator.camera.DestinationType;
+    }
+
+    // Called when a photo is successfully retrieved
+    //
+    function onPhotoDataSuccess(imageData) {
+      // Uncomment to view the base64-encoded image data
+      // console.log(imageData);
+
+      // Get image handle
+      //
+      var smallImage = document.getElementById('smallImage');
+
+      // Unhide image elements
+      //
+      smallImage.style.display = 'block';
+
+      // Show the captured photo
+      // The in-line CSS rules are used to resize the image
+      //
+      smallImage.src = "data:image/jpeg;base64," + imageData;
+    }
+
+    // Called when a photo is successfully retrieved
+    //
+    function onPhotoURISuccess(imageURI) {
+      // Uncomment to view the image file URI
+      // console.log(imageURI);
+
+      // Get image handle
+      //
+      var largeImage = document.getElementById('largeImage');
+
+      // Unhide image elements
+      //
+      largeImage.style.display = 'block';
+
+      // Show the captured photo
+      // The in-line CSS rules are used to resize the image
+      //
+      largeImage.src = imageURI;
+    }
+
+    // A button will call this function
+    //
+    function capturePhoto() {
+      // Take picture using device camera and retrieve image as base64-encoded string
+      navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 50,
+        destinationType: destinationType.DATA_URL });
+    }
+
+    // A button will call this function
+    //
+    function capturePhotoEdit() {
+      // Take picture using device camera, allow edit, and retrieve image as base64-encoded string
+      navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 20, allowEdit: true,
+        destinationType: destinationType.DATA_URL });
+    }
+
+    // A button will call this function
+    //
+    function getPhoto(source) {
+      // Retrieve image file location from specified source
+      navigator.camera.getPicture(onPhotoURISuccess, onFail, { quality: 50,
+        destinationType: destinationType.FILE_URI,
+        sourceType: source });
+    }
+
+    // Called if something bad happens.
+    //
+    function onFail(message) {
+      alert('Failed because: ' + message);
+    }
+
+    </script>
+  </head>
+  <body>
+    <button class="btn btn-warning btn-back">Kembali</button>
+        <div class="services-thumb">
+        <div class="d-flex flex-wrap align-items-center border-bottom mb-4 pb-3">
+            <center>
+         <div class="services-price-wrap ms-auto">
+                 <p class="services-price-text mb-0">B3</p>
+        <div class="services-price-overlay"></div>
+        </div>
+            </center>
+    
+        </div>
+    <button onclick="capturePhoto();" id="btn">Capture Photo</button> <br>
+    <!-- <button onclick="capturePhotoEdit();">Capture Editable Photo</button> <br>
+    <button onclick="getPhoto(pictureSource.PHOTOLIBRARY);">From Photo Library</button><br>
+    <button onclick="getPhoto(pictureSource.SAVEDPHOTOALBUM);">From Photo Album</button><br> -->
+    <img style="display:none;width:100px;height:100px;" id="smallImage" data-img="b3" src="" />
+    <img style="display:none;" id="largeImage" src="" />
+     <div>
+        <h3>Berat Sampah</h3>
+         <div class="container">
+    <label for="uname"><b>Estimasi Berat Sampah B3</b></label>
+    <input type="text" placeholder="Isi Berat Sampah" name="berat_b3"required>
+    <!-- <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required> -->
+  </div>
+  	<center>
+      
+            <button id="btn_b3" name="btnPenjemputan" class="button button2" style="background-color:blue;"></button>
+        
+	</center>
+  <script src="js/index.js"></script>
+  </body>
+</html>
